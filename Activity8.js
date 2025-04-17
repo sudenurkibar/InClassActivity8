@@ -44,7 +44,7 @@ function addScore() {
     var score = parseInt($("score").value);
 
     if (name === "" || isNaN(score) || score < 0 || score > 100) {
-        alert("You must enter a name and a valid score");
+        document.getElementById("error").textContent = "You must enter a name and a valid score!";
     } else {
         names.push(name);
         scores.push(score);
@@ -53,5 +53,7 @@ function addScore() {
         $("score").value = "";
 
         $("name").focus();
+
+        document.getElementById("error").textContent = "";
     }
 }

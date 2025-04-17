@@ -26,13 +26,13 @@ function displayResults()
     }
 	
     document.getElementById("results").innerHTML = "<h2>Results</h2>";
-    document.getElementById("results").innerHTML += "<p>Average score is " + average.toFixed(2) + "</p>";
-    document.getElementById("results").innerHTML += "<p>High score is " + highest + "</p>";
+    document.getElementById("results").innerHTML += "<p>Average score = " + average + "</p>";
+    document.getElementById("results").innerHTML += "<p>High score = " + names[highestIndex] + " with a score of " + highest + "</p>";
 }
 
 function displayScores() {
     var table = $("scores_table");
-    table.innerHTML = "<tr><th>Name</th><th>Score</th></tr>";
+    table.innerHTML = "<tr><td><strong>Name<strong></td><td><strong>Score<strong></td></tr>";
 
     for (var i = 0; i < names.length; i++) {
         table.innerHTML += "<tr><td>" + names[i] + "</td><td>" + scores[i] + "</td></tr>";
